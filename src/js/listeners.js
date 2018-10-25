@@ -325,9 +325,9 @@ class Listeners {
         // Handle the media finishing
         on.call(player, player.media, 'ended', () => {
             // Show poster on end
-            if (player.isHTML5 && player.isVideo && player.config.resetOnEnd) {
+            if (player.config.resetOnEnd) {
                 // Restart
-                player.restart();
+                player.stop();
             }
         });
 
